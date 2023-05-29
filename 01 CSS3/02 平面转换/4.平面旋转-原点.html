@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平面旋转-原点</title>
+	<style>
+		.far {
+			width: 700px;
+			height: 500px;
+			background-color: aliceblue;
+			border: 2px solid black;
+			position: relative;
+		}
+		
+		.son {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			
+			transition: all 2s;
+			
+			/* 默认的原点（围绕谁做旋转），是盒子的中心
+			   transform-origin可以改变原点位置：常用取值（left top right bottom center）
+			   
+			   ！！！
+			   需要加在旋转元素上
+			 */
+			transform-origin: left bottom; /* 围绕左下角旋转 */
+		}
+		
+		.far:hover .son {
+			transform: rotate(360deg);
+		}
+	
+	</style>
+</head>
+<body>
+
+<div class="far">
+	<div class="son"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平面位移</title>
+	
+	<style>
+		.far {
+			width: 700px;
+			height: 500px;
+			background-color: aquamarine;
+			border: 2px solid black;
+		}
+		
+		.son {
+			width: 70px;
+			height: 50px;
+			background-color: chartreuse;
+			
+			/* 添加位移【过渡】属性 */
+			transition: all 0.5s;
+		}
+		
+		.far:hover .son {
+			/* 位移属性(水平移动距离，垂直移动距离) */
+			/*transform: translate(350px, 250px);*/
+			
+			/*百分比：移动的盒子本身的尺寸*/
+			/*transform: translate(500%, 500%);*/
+			
+			/*只一个参数：X-轴生效*/
+			/*transform: translate(500%);*/
+			
+			/*X-Y-只单独设置*/
+			/*transform: translateX(600%);*/
+			transform: translateY(600%);
+		}
+		/* transform 改变
+		   translate 转化，翻译
+	   */
+		
+	</style>
+</head>
+<body>
+
+<div class="far">
+	<div class="son"></div>
+</div>
+
+</body>
+</html>

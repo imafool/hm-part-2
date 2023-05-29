@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平面旋转-多重转换</title>
+	<style>
+		.far {
+			width: 700px;
+			height: 500px;
+			background-color: aliceblue;
+			border: 2px solid black;
+			position: relative;
+		}
+		
+		.son {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			
+			transition: all 2s;
+		}
+		
+		.far:hover .son {
+			/* 多重转换：位移 > 旋转
+			
+			 ！！！ 严格顺序（旋转会改变坐标轴向，从而影响位移方向）
+			 ！！！ 单独设置也不行（属性相同，值不同会层叠）
+			 */
+			transform: translate(500px) rotate(360deg);
+		}
+	
+	</style>
+</head>
+<body>
+
+<div class="far">
+	<div class="son"></div>
+</div>
+
+</body>
+</html>

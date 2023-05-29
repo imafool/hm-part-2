@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>平面旋转-缩放</title>
+	<style>
+		.far {
+			width: 700px;
+			height: 500px;
+			background-color: aliceblue;
+			border: 2px solid black;
+			position: relative;
+		}
+		
+		.son {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			
+			transition: all 2s;
+		}
+		
+		.far:hover .son {
+			/* 缩放：scale(X轴缩放倍数，Y轴缩放倍数) */
+			/*transform: scale(2, 2);*/
+			
+			/*
+			!!! 简写：X轴Y轴等比例缩放
+			*/
+			transform: scale(0.5);
+		}
+	
+	</style>
+</head>
+<body>
+
+<div class="far">
+	<div class="son"></div>
+</div>
+
+</body>
+</html>
