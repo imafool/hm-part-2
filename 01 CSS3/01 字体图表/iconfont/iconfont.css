@@ -1,0 +1,49 @@
+/*定义字体*/
+@font-face {
+  font-family: "iconfont"; /* Project id 4092286 */
+  src: url('iconfont.woff2?t=1685339239733') format('woff2'),
+       url('iconfont.woff?t=1685339239733') format('woff'),
+       url('iconfont.ttf?t=1685339239733') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*伪元素，内容是图标*/
+.icon-kuaijiezhifu:before {
+  content: "\e61e";
+}
+
+.icon-yanziwancheng:before {
+  content: "\e61f";
+}
+
+.icon-guanbi:before {
+  content: "\e620";
+}
+
+.icon-anquanjiankong:before {
+  content: "\e625";
+}
+
+.icon-ditie:before {
+  content: "\e626";
+}
+
+.icon-yingyinqu:before {
+  content: "\e624";
+}
+
+.icon-zhuoqiuqu:before {
+  content: "\e627";
+}
+
+.icon-shafa:before {
+  content: "\e628";
+}
+
