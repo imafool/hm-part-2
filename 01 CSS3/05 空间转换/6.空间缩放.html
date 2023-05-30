@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空间缩放</title>
+	<style>
+		.cube {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin: 100px auto;
+			transition: all 2s;
+			
+			/* 构造立方体: 让盒子处于空间状态 */
+			transform-style: preserve-3d;
+			
+			/* 空间缩放 */
+			transform: scale3d(2,2,2);
+		}
+		
+		/* 后代选择器 */
+		.cube div {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+			height: 100px;
+		}
+		
+		.front {
+			background-color: chartreuse;
+			transform: translateZ(200px);
+		}
+		
+		.back {
+			background-color: aqua;
+		}
+		
+		.cube:hover {
+			/* 空间旋转 */
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="cube">
+		<div class="front">Front</div>
+		<div class="back">Back</div>
+	</div>
+
+</body>
+</html>

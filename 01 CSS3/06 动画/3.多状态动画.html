@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画2</title>
+	
+	<style>
+		/* 定义动画 */
+		@keyframes my-ani-2 {
+			0% {
+				width: 200px;
+			}
+			25% {
+				width: 400px;
+			}
+			50% {
+				width: 600px;
+			}
+			100% {
+				width: 800px;
+			}
+		}
+		
+		.box {
+			/* 盒子初始属性 */
+			height: 50px;
+			width: 100px;
+			background-color: chartreuse;
+			
+			/* 使用动画 */
+			/*animation: my-ani-2 10s;*/
+			
+			/*animation: 动画名称 动画花费时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕状态;*/
+			/*animation: my-ani-2 4s linear 1s;*/
+			
+			/* 无线循环 infinite */
+			/*animation: my-ani-2 2s linear infinite;*/
+			
+			/* 执行完毕状态，默认backwards */
+			animation: my-ani-2 2s linear forwards; /*停留在结束状态*/
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>

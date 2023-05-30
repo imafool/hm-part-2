@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空间位移</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			
+			/* 水平垂直居中，偏上 */
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -50px;
+			margin-top: -70px;
+			
+			/* 过渡 */
+			transition: all 2s;
+		}
+		
+		div:hover {
+			/* 3D位移 */
+			transform: translate3d(300px, 200px, 100px);
+			
+			/*transform: translateX(300px);*/
+			/*transform: translateY(300px);*/
+			/*transform: translateZ(300px); !* 看不到效果 *!*/
+			
+			/* 常识：同一个东西，远处看着小，近处看着大；
+			
+				 屏幕是平面，默认不提供近大远小的效果支持；
+				 perspective 属性可以产生该效果，加在父级元素上！！！建议800px-1200px */
+		}
+		
+		body {
+			/* 透视效果 */
+			perspective: 1200px;
+			
+			/* 1200px的原理：
+			   视距：透视距离，也就是人眼睛到屏幕的距离。
+			   如果很大，近大远小的效果不狠明显，否则代表人眼离屏幕近，效果明显！
+			 */
+		}
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空间旋转</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -50px;
+			margin-top: -70px;
+			
+			transition: all 2s;
+		}
+		
+		div:hover {
+			/*transform: rotateZ(360deg); !* 和平面旋转效果一致，验证猜想 *!*/
+			
+			/*transform: rotateX(360deg);*/
+			transform: rotateY(360deg);
+			
+			/* ！！！
+			   屏幕3个轴的印象 */
+			
+			/* ！！！！
+			   左手法则：握轴，大拇指正，四指弯曲方向为正值*/
+			
+			/* rotate3d(x,y,z,deg): 自定义坐标轴 */
+		}
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>

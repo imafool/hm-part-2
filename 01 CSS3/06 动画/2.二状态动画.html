@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画1</title>
+	
+	<style>
+		/* 定义动画 */
+		@keyframes my-ani-1 {
+			from {
+				width: 100px;
+			}
+			to {
+				width: 800px;
+			}
+		}
+		
+		.box {
+			/* 盒子初始属性 */
+			height: 50px;
+			width: 100px;
+			background-color: chartreuse;
+			
+			/* 使用动画 */
+			animation: my-ani-1 2s;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>

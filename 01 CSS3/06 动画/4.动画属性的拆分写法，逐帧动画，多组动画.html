@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画属性的拆分写法，逐帧动画，多组动画</title>
+	
+	<style>
+		/* 定义动画 */
+		@keyframes my-ani-2 {
+			0% {
+				width: 200px;
+			}
+			25% {
+				width: 400px;
+			}
+			50% {
+				width: 600px;
+			}
+			100% {
+				width: 800px;
+			}
+		}
+		
+		.box {
+			/* 盒子初始属性 */
+			height: 50px;
+			width: 100px;
+			background-color: chartreuse;
+			
+			/* 拆分写法：
+				 1. 动画名称
+				 2. 时长
+				 3. 延迟时间
+				 4. 执行完毕状态
+				 5. 重复次数
+				 6. 动画执行方向
+				 7. 暂停（配合hover）
+				 8. 速度曲线：animation-timing-function
+				    -- 逐帧动画 steps(N)，跳跃效果，一般配合精灵图实现动画效果，--是将动画过程等分成 N 份，一般等于精灵小图个数，添加无限重复，盒子位移
+				    -- 补间动画（主要使用，是平滑效果）
+			 */
+			
+			
+			/* 多组动画：使用多个定义的动画，逗号隔开 */
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>

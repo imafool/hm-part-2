@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空间位移</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: chartreuse;
+			
+			/* 水平垂直居中，偏上 */
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -50px;
+			margin-top: -70px;
+			
+			/* 过渡 */
+			transition: all 2s;
+		}
+		
+		div:hover {
+			/* 3D位移 */
+			/*transform: translate3d(300px, 200px, 100px);*/
+			
+			/*transform: translateX(300px);*/
+			/*transform: translateY(300px);*/
+			transform: translateZ(300px); /* 看不到效果 */
+		}
+	</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>
