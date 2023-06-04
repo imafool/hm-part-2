@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修改Flex主轴方向</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+
+      .box {
+          /* 主轴默认是水平，侧轴默认垂直 */
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          /* 修改主轴方向：垂直 */
+          /*flex-direction: column;*/
+
+          /* 默认，水平 */
+          /*flex-direction: row;*/
+
+          /* 行，从右向左 */
+          /*flex-direction: row-reverse;*/
+
+          /* 列，从下到上 */
+          flex-direction: column-reverse;
+
+          height: 600px;
+          border: 1px solid red;
+      }
+
+      .box div {
+          width: 100px;
+          height: 100px;
+          background-color: chartreuse;
+      }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+</body>
+</html>

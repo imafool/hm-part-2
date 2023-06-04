@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex侧轴对齐方式</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-evenly;
+
+      /*
+        修改侧轴对齐方式
+        1. align-items(对弹性容器)
+        2. align-self(对弹性盒子)
+      */
+
+      /* 默认，起点开始依次排列 */
+      /*align-items: flex-start;*/
+
+      /* 终点开始依次排列 */
+      /*align-items: flex-end;*/
+
+      /* 沿侧轴居中 */
+      /*align-items: center;*/
+
+      /* 默认值，弹性盒子沿主轴被拉伸，铺满容器，如果子元素有高度，不会拉伸 */
+      align-items: stretch;
+
+      height: 600px;
+      border: 1px solid red;
+    }
+
+    .box div {
+      width: 100px;
+      height: 100px;
+      background-color: chartreuse;
+    }
+    </style>
+</head>
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+</html>

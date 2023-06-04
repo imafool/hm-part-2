@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex伸缩比</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      display: flex;
+
+      height: 600px;
+      border: 1px solid red;
+    }
+
+    .box div {
+      height: 100px;
+      margin: 5px 20px;
+      background-color: chartreuse;
+    }
+
+    .box div:nth-child(1){
+        width: 50px;
+    }
+
+    .box div:nth-child(2){
+      flex: 1; /* 剩余的一份（父级宽-div1-div3，分一份，占一份） */
+    }
+
+    .box div:nth-child(3){
+        flex: 1; /* 此时分两份，各占一份 */
+    }
+
+    </style>
+</head>
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+</html>

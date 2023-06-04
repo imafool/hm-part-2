@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex</title>
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        /* Flex布局，又叫弹性布局
+           1. 是一种浏览器提倡的布局模型，适合结构化的布局
+           2. 布局网页更简单，灵活
+           3. 避免浮动脱标的问题
+
+           --Flex专门为布局（有兼容问题），浮动开始是作为文字环绕的，布局过渡方案
+           --事先搞清楚，项目是否需要考虑低版本浏览器兼容性问题
+           --caniuse.com
+         */
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid red;
+    }
+
+    .box div {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+</html>
