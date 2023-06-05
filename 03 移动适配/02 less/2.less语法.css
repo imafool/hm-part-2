@@ -1,0 +1,37 @@
+/* 算数运算 */
+.box {
+  width: 120px;
+  width: 140px;
+  width: 60px;
+  width: 6rem;
+  height: 200px;
+  background-color: black;
+}
+/* 嵌套写法：快速生成后代选择器 */
+.father {
+  background-color: chartreuse;
+  width: 500px;
+  height: 500px;
+}
+.father .son {
+  width: 200px;
+}
+.father .son:hover {
+  color: aqua;
+}
+/* 变量 */
+.pa {
+  color: red;
+}
+.pb {
+  color: red;
+}
+.pc {
+  color: red;
+}
+/* 引入 */
+/* 导出路径配置 */
+/* 如果禁用导出，在less文件第一行添加 // out:false
+  !! 被导入的公共less，直接被别的less导入，所以不需要导出css
+ */
+/*# sourceMappingURL=2.less语法.css.map */

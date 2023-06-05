@@ -1,0 +1,51 @@
+/* 算数运算 */
+.box {
+  width: 100 + 20px;
+  width: 200 - 60px;
+  width: 10 * 6px;
+
+  width: (120 / 20rem); // 除法运算写法：(100 / 20px) 或者 100 ./ 20px
+
+  height: 200px;
+  background-color: black;
+}
+
+/* 嵌套写法：快速生成后代选择器 */
+.father {
+  background-color: chartreuse;
+  width: 500px;
+  height: 500px;
+  .son {
+    width: 200px;
+    &:hover { // & 表示当前选择器，而非子级
+      color: aqua;
+    }
+  }
+}
+
+/* 变量 */
+// 定义变量(使用导出方式)
+@import '3.common.less';
+
+// 使用变量
+.pa {
+  color: @bg;
+}
+
+.pb {
+  color: @bg;
+}
+
+.pc {
+  color: @bg;
+}
+
+/* 引入 */
+// 1. HTML中使用<link>，引入编译出的css文件
+// 2. 公共less引入，@import 'xx.less'
+
+/* 导出路径配置 */
+
+/* 如果禁用导出，在less文件第一行添加 // out:false
+  !! 被导入的公共less，直接被别的less导入，所以不需要导出css
+ */
