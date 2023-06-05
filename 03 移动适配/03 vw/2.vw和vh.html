@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vm/vh</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 50vw; /* 如果视口宽度375px，则1/100是3.75px，也就是一个vw，50vw=50*3.75px */
+        height: 50vw;
+        background-color: chartreuse;
+    }
+
+    .box2 {
+        width: 50vh;
+        height: 50vh;
+        background-color: red;
+    }
+
+    /* 移动设备适配，根据设计稿计算 */
+  </style>
+</head>
+<body>
+
+<div class="box">
+
+</div>
+
+<div class="box2">
+
+</div>
+
+</body>
+</html>
