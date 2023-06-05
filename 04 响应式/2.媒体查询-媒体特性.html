@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>媒体查询</title>
+
+  <style>
+
+    /* 响应式：根据媒体查询，判断视口范围，使差异化的样式生效 */
+    @media (max-width: 500px){
+        body{
+            background-color: blueviolet;
+        }
+    }
+
+    @media (min-width: 500px){ /* 只要高于500px，就生效内部样式 */
+        body{
+            background-color: chartreuse;
+        }
+    }
+
+    @media (min-width: 800px){ /* 书写顺序，注意CSS层叠性 */
+        body{
+            background-color: red;
+        }
+    }
+
+    /* 完整写法:
+      连接多个条件：and  only  not
+      区分设备类型：screen屏幕 print打印预览 speech阅读器 all所有设备
+      媒体特性：width，height，【max-width，min-width】，max-height，min-height，orientation( portrait竖屏 landscape横屏 )
+    */
+    /*
+    @media keyword type and () {
+    }
+    */
+
+    /* 使用link写法 */
+
+    /* 隐藏：检测视口宽度小于某个值，隐藏部分元素 display:none */
+
+  </style>
+</head>
+<body>
+
+<div class="box">
+
+</div>
+
+</body>
+</html>
