@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rem</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* HTML给个字号 */
+    html {
+        font-size: 20px;
+    }
+
+    /* 随屏幕等比缩放 */
+    .box {
+        /* rem 相对单位
+          1. rem 单位相对于HTML标签的字号计算结果，1rem = 1HTML字号大小
+         */
+        width: 5rem;
+        height: 5rem;
+        background-color: chartreuse;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>

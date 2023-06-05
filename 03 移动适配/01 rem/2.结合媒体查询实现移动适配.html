@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rem</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 所以使用【媒体查询】设置差异化CSS样式，可以检测设备视口尺寸 */
+    @media (width: 375px) { /* 如果视口宽375px，则设置html字号 */
+        html{
+          font-size: 37.5px; /* 常规rem方案：将网页等分10份，HTML标签的字号为视口宽度的1/10 */
+            /* 所以，如果根据设计稿尺寸，1.确定适配设备视口宽，确认HTML根字号，2.rem尺寸就是px值/基准字号 */
+        }
+    }
+
+    @media (width: 414px) { /* 如果视口宽414px，则设置html字号 */
+        html{
+            font-size: 41.4px;
+        }
+    }
+
+    html {
+        /* 如果确定尺寸，移动端设备依旧无法适配 */
+        /*font-size: 20px; */
+    }
+
+    .box {
+        width: 5rem; /* 根据HTML计算 */
+        height: 5rem;
+        background-color: chartreuse;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>
